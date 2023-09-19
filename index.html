@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Adriana Villafane">
+    <meta name="description" content="Generador de memes realizado por Adriana Villafane, durante su cursada en ADA 2023, comision 19">
+    <meta property="og:title" content="Generador de memes, Adriana Villafanie, comision-19">
+    <meta property="og:type" content="Muestra de proyectos realizados por Adriana Villafanie">
+    <meta property="og:image" content="pagina deployada">
+    <meta property="og:url("https://editor-de-memes-comision-19.vercel.app/")" content="pagina deployada">
+    <meta name="generador_de_memes" content="Aplicacion_para_generar_memes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fuentes google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <title>GeNeRaDoR dE MeMeS</title>
+    <!--link css-->
+    <link rel="stylesheet" href="style.css">
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+ <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/bcc472557c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
-    
+
+<body class="gran-contenedor">
+    <div class="contenedor">
+        <div class="fila"
+        <header>
+            <div class="encabezado">
+                <h1>Generador de Memes</h1>
+            </div>
+
+            <div class="botonera">
+                <button type="button" id="img-btn">
+                    <i class="fa-solid fa-file-image">Imagen</i>
+                </button>
+
+                <button type="button" id="text-btn">
+                    <i class="fa-solid fa-font">Texto</i>
+                </button>
+                <button type="button" id="mode-btn">
+                    <i class="fa-solid fa-lightbulb">Modo Oscuro</i>
+                </button>
+            </div>
+        </header>
+        <main>
+            <div id="meme-container" class="meme-container modo-oscuro modo-claro">
+                <p class="text-container textoSuperior" id="top-text">TOP TEXT</p>
+
+                <div id="meme-img" class="meme-img">
+
+                </div>
+                <p class="text-container textoInferior" id="bottom-text">
+                    BOTTOM TEXT
+                </p>
+            </div>
+
+
+            <button type="button" id="download-btn" class="download-btn">Descargar Meme</button>
+            <span>Hecho por Adriana Villafañe</span>
+        </main>
+
+    </div>
+    <div class="aside-container aside-frambuesa">
+        <div class="aside" id="aside-img">
+            <aside>
+                <div class="xBoton">
+                    <button type="button"><i class="fa-solid fa-xmark" id="xImg"></i></button>
+                </div>
+                <h2>Imagen</h2>
+                <label for="url"> URL:</label>
+
+                <input type="url" name="url" id="url-input" placeholder="https://example.com" pattern="https://.*"
+                    size="24" required>
+
+
+                <label for="fondo">FONDO</label>
+                <div class="contenedor-color-input">
+                    <input type="color" value="#ff0000" class="color-input" id="color-picker">
+                    <span id="color-name"></span>
+
+                    <select name="fondo" id="filtros-fondo">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminosidad">Luminosidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+
+                    </select>
+                </div>
+                <h2>FILTROS</h2>
+
+                <label for="brillo">BRILLO</label>
+                <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="brightness-slider">
+
+                <label for="opacidad">OPACIDAD</label>
+                <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="opacity-slider">
+
+                <label for="contraste">CONTRASTE</label>
+                <input type="range" min="100" max="1000" value="100" step="100" class="myRange" id="contrast-slider">
+
+                <label for="desenfoque">DESENFOQUE</label>
+                <input type="range" min="0" max="10" value="0" step="0.1" class="myRange" id="blur-slider">
+
+                <label for="escala_grises">ESCALA DE GRISES</label>
+                <input type="range" min="0" max="100" value="0" step="1" class="myRange" id="grayscale-slider">
+
+</aside>
+<script src="app.js"></script>
+
 </body>
+
 </html>
