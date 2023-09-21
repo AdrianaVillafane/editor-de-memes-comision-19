@@ -91,11 +91,11 @@
                         <div>
                             <input type="color" value="#15485">
 
-                            <span id="colo-img-span">#15485</span>
+                            <span id="color-name">#15485</span>
                         </div>
 
                         <div>
-                            <select id="">
+                            <select id="filtros-fondo">
 
                                 <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
@@ -114,8 +114,20 @@
                     <div>
                         <p clas="titulo-terciario">FILTROS</p>
                         <div>
-                            <label for="">BRILLO</label>
+                            <label for="brillo">BRILLO</label>
                             <input type="range" id="brightnes" min="0" max="1" value="0" step="0.1">
+                        </div>
+                        <div>
+                            <label for="opacidad">OPACIDAD</label>
+                            <input type="range" id="opacity" min="0" max="1" value="1" step="0.1">
+                        </div>
+                        <div>
+                            <label for="contraste">CONTRASTE</label>
+                            <input type="range" id="contras" min="100" max="1000" value="100" step="100">
+                        </div>
+                        <div>
+                            <label for="desenfoque">DESENFOQUE</label>
+                            <input type="range" id="blur" min="0" max="10" value="0" step="0.5">
                         </div>
                     </div>
                 </div>
