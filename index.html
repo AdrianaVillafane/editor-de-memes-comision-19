@@ -45,11 +45,11 @@
                 <div>
                     <h1>Generador de Memes</h1>
                     <div>
-                        <a id="btn-img-oscuro"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif" />Imagen</a>
-                        <a id="btn-img-claro"><img src="./img/icons8-pila-de-fotos-modo-claro.gif" /></a>
-                        <a id="btn-txt"><img src="./img/icons8-pluma.gif" />Texto</a>
-                        <a id="btn-modo-oscuro"><img src="./img/icons8-noche-modo-oscuro.gif" />Modo Oscuro</a>
-                        <a id="btn-modo-claro"><img src="./img/icons8-noche-modo-claro.gif" /></a>
+                        <a id="btn-img-oscuro"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif" alt="imagen modo oscuro"/>Imagen</a>
+                        <a id="btn-img-claro"><img src="./img/icons8-pila-de-fotos-modo-claro.gif" alt="imagen modo claro"/></a>
+                        <a id="btn-txt"><img src="./img/icons8-pluma.gif" alt="texto"/>Texto</a>
+                        <a id="btn-modo-oscuro"><img src="./img/icons8-noche-modo-oscuro.gif" alt="modo oscuro"/>Modo Oscuro</a>
+                        <a id="btn-modo-claro"><img src="./img/icons8-noche-modo-claro.gif" alt="modo claro"/></a>
                     </div>
                 </div>
             </header>
@@ -60,7 +60,7 @@
                 <div id="contenedor-img">
                     <p id="texto-superior-meme" class="meme-text">TOP TEXT</p>
 
-                    <div src="" alt id="meme-img">
+                   <!--<div src="" alt id="meme-img">     aca va imagen de meme --> 
 
                         <p id="texto-inferior-meme" class="meme-text">BOTTOM TEXT</p>
 
@@ -70,7 +70,7 @@
 
                     <div>
                         <div>
-                            <a id="descarga-icono"><img src="./img/icons8-descargar.gif" </a>
+                            <a id="descarga-icono"><img src="./img/icons8-descargar.gif"/> </a>
                         </div>
                     </div>
             </main>
@@ -161,7 +161,7 @@
                 </section>
                 <!--    aside   texto    -->
 
-                <section id="section-txt" class="">
+                <iv id="section-txt" class="">
                     <h2>TEXTO</h2>
 
                     <div>
@@ -236,7 +236,73 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!--color         -->
+
+                <div>
+                    <div>
+                        <div>
+                            <h3>COLOR</h3>
+
+                            <input type="color" id=""  value="#000000">
+                            <span id="">#000000</span>
+                        </div>
+                        <!--background       -->
+                        <div>
+                            <h3>FONDO</h3>
+
+                            <input type="color" id=""  value="#ffffff"
+                        </div>
+                    </div>
+<!--checkbox -->
+                    <div>
+<form action="">
+    <p>
+        <label>
+            <input id="sin-fondo" type="checkbox"/>
+            <span>Fondo Transparente</span>
+        </label>
+    </p>
+</form>
+                    </div>
+                    <!--       efectos en la fuente              -->
+                    <div>
+                        <h3>CONTORNO</h3>
+                        <div>
+                            <a id="">Ninguno</a>
+
+                            <a id="">Claro</a>
+
+                            <a id="">Oscuro</a>  
+
+                        </div>
+                    </div>
+                    <!--                   espaciado    -->
+                    <div>
+                        <h3>ESPACIADO</h3>
+                        <div>
+                            <input id="" type="number" min="5" max="40" value="25">
+                        </div>
+                    </div>
+                    <!--                    -->
+                    <div>
+                        <h3>INTERLINEADO</h3>
+                        <select name="" id="">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+
+                        </select>
+                    </div>
+                </div>
+            </section>
             </aside>
         </div>
     </div>
+    <footer><samp>Hecho por Adriana Villafañe</samp></footer>
+
+    <script src="./app.js"></script>
 </body>
