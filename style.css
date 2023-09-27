@@ -1,6 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*general*/
+
+.cuerpo {
+    height: 100vh;
+    background-color: gray;
+}
+header {
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    color: antiquewhite;
+    height: 50%;
+}
+
+.generador-contenedor {
+    width: 60%;
+    height: 40vw;
+    margin: 5px auto;
+    background-color: pink;
+}
+#contenedor-img{
+  border: 2px solid black;
+  height: 90%;
+}
+
+.meme-text{
+  text-align: center;
+  height: 15%;
+  background-color: beige;
+}
+#meme-img{
+  width: 100%;
+  height: 70%;
+  border: 2px solid black;
+}
+.contenedor-btn-descarga{
+  display: flex;
+  justify-content: center;
+}
+#descarga-icono{
+  border: 2px solid black;
+  margin: 5px auto;
+  
+}
+section{
+  border: 1px solid black;
+  display: flex;
+  width: 30%;
+}
+#aside{
+display: flex;
+justify-content: center;
+height: 30vw;
+width: 60%;
+background-color: gray;
+}
+.btn-x{
+  align-items: end;
+}

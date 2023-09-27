@@ -37,7 +37,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body>
+<b class="cuerpo modo-claro modo-oscuro">
     <div>
         <div>
             <!--         header           -->
@@ -45,11 +45,14 @@
                 <div>
                     <h1>Generador de Memes</h1>
                     <div>
-                        <a id="btn-img-oscuro"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif" alt="imagen modo oscuro"/>Imagen</a>
-                        <a id="btn-img-claro"><img src="./img/icons8-pila-de-fotos-modo-claro.gif" alt="imagen modo claro"/></a>
-                        <a id="btn-txt"><img src="./img/icons8-pluma.gif" alt="texto"/>Texto</a>
-                        <a id="btn-modo-oscuro"><img src="./img/icons8-noche-modo-oscuro.gif" alt="modo oscuro"/>Modo Oscuro</a>
-                        <a id="btn-modo-claro"><img src="./img/icons8-noche-modo-claro.gif" alt="modo claro"/></a>
+                        <a id="btn-img-oscuro"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif"
+                                alt="imagen modo oscuro" />Imagen</a>
+                        <a id="btn-img-claro"><img src="./img/icons8-pila-de-fotos-modo-claro.gif"
+                                alt="imagen modo claro" /></a>
+                        <a id="btn-txt"><img src="./img/icons8-pluma.gif" alt="texto" />Texto</a>
+                        <a id="btn-modo-oscuro"><img src="./img/icons8-noche-modo-oscuro.gif" alt="modo oscuro" />Modo
+                            Oscuro</a>
+                        <a id="btn-modo-claro"><img src="./img/icons8-noche-modo-claro.gif" alt="modo claro" /></a>
                     </div>
                 </div>
             </header>
@@ -60,17 +63,15 @@
                 <div id="contenedor-img">
                     <p id="texto-superior-meme" class="meme-text">TOP TEXT</p>
 
-                   <!--<div src="" alt id="meme-img">     aca va imagen de meme --> 
-
-                        <p id="texto-inferior-meme" class="meme-text">BOTTOM TEXT</p>
+                    <div class="imagen-central" src="" alt="" id="meme-img">
 
                     </div>
-
+                    <p id="texto-inferior-meme" class="meme-text">BOTTOM TEXT</p>
                     <!--      boton de descarga del meme    -->
 
                     <div>
-                        <div>
-                            <a id="descarga-icono"><img src="./img/icons8-descargar.gif"/> </a>
+                        <div class="contenedor-btn-descarga">
+                            <a id="descarga-icono"><img src="./img/icons8-descargar.gif" /> </a>
                         </div>
                     </div>
             </main>
@@ -79,15 +80,20 @@
             <!--     aside img filtros     -->
 
             <aside id="aside">
-                <div>
+                <div clss="btn-x">
                     <div>
                         <a id="cerrar-btn"><img src="./img/icons8-x-16.png"></a>
                     </div>
                 </div>
                 <section id="seccion-img">
-                    <h2 class="titulo-secundario">IMAGEN</h2>
-
                     <div>
+                        <h2 class="titulo-secundario">IMAGEN</h2>
+                        <label for="url"> URL:</label>
+
+                        <input type="url" name="url" id="url-input" placeholder="https://example.com"
+                            pattern="https://.*" size="24" required>
+
+
                         <p class="titulo-terciario">FONDO</p>
                         <div>
                             <!--    input color    -->
@@ -161,7 +167,7 @@
                 </section>
                 <!--    aside   texto    -->
 
-                <iv id="section-txt" class="">
+ <section id="section-txt" class="aside-txt">
                     <h2>TEXTO</h2>
 
                     <div>
@@ -236,71 +242,71 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--color         -->
-
-                <div>
-                    <div>
-                        <div>
-                            <h3>COLOR</h3>
-
-                            <input type="color" id=""  value="#000000">
-                            <span id="">#000000</span>
-                        </div>
-                        <!--background       -->
-                        <div>
-                            <h3>FONDO</h3>
-
-                            <input type="color" id=""  value="#ffffff"
-                        </div>
-                    </div>
-<!--checkbox -->
-                    <div>
-<form action="">
-    <p>
-        <label>
-            <input id="sin-fondo" type="checkbox"/>
-            <span>Fondo Transparente</span>
-        </label>
-    </p>
-</form>
-                    </div>
-                    <!--       efectos en la fuente              -->
-                    <div>
-                        <h3>CONTORNO</h3>
-                        <div>
-                            <a id="">Ninguno</a>
-
-                            <a id="">Claro</a>
-
-                            <a id="">Oscuro</a>  
-
-                        </div>
-                    </div>
-                    <!--                   espaciado    -->
-                    <div>
-                        <h3>ESPACIADO</h3>
-                        <div>
-                            <input id="" type="number" min="5" max="40" value="25">
-                        </div>
-                    </div>
-                    <!--                    -->
-                    <div>
-                        <h3>INTERLINEADO</h3>
-                        <select name="" id="">
-                            <option value="0.8">0.8</option>
-                            <option value="1">1</option>
-                            <option value="1.2">1.2</option>
-                            <option value="1.5">1.5</option>
-                            <option value="2">2</option>
-                            <option value="2.5">2.5</option>
-
-                        </select>
-                    </div>
-                </div>
-            </section>
-            </aside>
         </div>
+        <!--color         -->
+
+        <div>
+            <div>
+                <div>
+                    <h3>COLOR</h3>
+
+                    <input type="color" id="" value="#000000">
+                    <span id="">#000000</span>
+                </div>
+                <!--background       -->
+                <div>
+                    <h3>FONDO</h3>
+
+                    <input type="color" id="" value="#ffffff" </div>
+                </div>
+                <!--checkbox -->
+                <div>
+                    <form action="">
+                        <p>
+                            <label>
+                                <input id="sin-fondo" type="checkbox" />
+                                <span>Fondo Transparente</span>
+                            </label>
+                        </p>
+                    </form>
+                </div>
+                <!--       efectos en la fuente              -->
+                <div>
+                    <h3>CONTORNO</h3>
+                    <div>
+                        <a id="">Ninguno</a>
+
+                        <a id="">Claro</a>
+
+                        <a id="">Oscuro</a>
+
+                    </div>
+                </div>
+                <!--                   espaciado    -->
+                <div>
+                    <h3>ESPACIADO</h3>
+                    <div>
+                        <input id="" type="number" min="5" max="40" value="25">
+                    </div>
+                </div>
+                <!--                    -->
+                <div>
+                    <h3>INTERLINEADO</h3>
+                    <select name="" id="">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+
+                    </select>
+                </div>
+            </div>
+            </div>
+        </section>
+            </aside>
+        
     </div>
     <footer><samp>Hecho por Adriana Villafañe</samp></footer>
 
