@@ -37,7 +37,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body class="cuerpo modo-claro modo-oscuro">
+<body class="ambos-modos  modo-claro modo-oscuro">
     <div>
         <div>
             <!--         header           -->
@@ -58,7 +58,9 @@
             </header>
             <!--                         fin Header           -->
 
-            <!--                       Main                                -->
+            <!--                       main                                -->
+            <!-- pongo un div que guarde el main y aside-->
+            <div class="organizador">
             <main class="generador-contenedor">
                 <div id="contenedor-img">
                     <p id="texto-superior-meme" class="meme-text">TOP TEXT</p>
@@ -85,7 +87,7 @@
                         <a id="cerrar-btn"><img src="./img/icons8-x-16.png"></a>
                     </div>
                 </div>
-                <section id="seccion-img">
+                <section id="seccion-img" class="section-img">
                     <div>
                         <h2 class="titulo-secundario">IMAGEN</h2>
                         <label for="url"> URL:</label>
@@ -94,15 +96,17 @@
                             pattern="https://.*" size="24" required>
 
 
-                        <p class="titulo-terciario">FONDO</p>
+                        <p>FONDO</p>
                         <div>
                             <!--    input color    -->
+                            <!-- agrego un div para el color y el nombre-->
+                            <div class="img-color">
                             <div>
-                                <input type="color" value="#DC19F5">
+                                <input type="color" value="#DC19F5" class="color-input" id="input-color">
 
                                 <span id="color-name">#DC19F5</span>
                             </div>
-
+</div>
                             <div>
                                 <select id="filtros-fondo">
 
@@ -117,44 +121,44 @@
 
                             </div>
 
-                        </div>
-
+                        
+</div>
                         <!--      filtros para la imagen     -->
                         <div>
-                            <p clas="titulo-terciario">FILTROS</p>
-                            <div>
+                            <p>FILTROS</p>
+                            <div class="filtro-rango">
                                 <label for="brillo">BRILLO</label>
                                 <input type="range" id="brightnes" min="0" max="1" value="0" step="0.1">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="opacidad">OPACIDAD</label>
                                 <input type="range" id="opacity" min="0" max="1" value="0" step="0.1">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="contraste">CONTRASTE</label>
                                 <input type="range" id="contras" min="100" max="1000" value="100" step="100">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="desenfoque">DESENFOQUE</label>
                                 <input type="range" id="blur" min="0" max="10" value="0" step="0.5">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="">ESCALA DE GRISES</label>
                                 <input type="range" id="grayscale" min="0" max="100" value="0">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="sepia">SEPIA</label>
                                 <input type="range" id="sepia" min="0" max="100" value="0">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="">HUE</label>
                                 <input type="range" id="hue" min="0" max="360" value="0">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="saturacion">SATURADO</label>
                                 <input type="range" id="saturate" min="100" max="1000" value="100" step="10">
                             </div>
-                            <div>
+                            <div class="filtro-rango">
                                 <label for="negativo">NEGATIVO</label>
                                 <input type="range" id="invert" min="0" max="1" value="0" step="0.1">
                             </div>
@@ -168,7 +172,7 @@
                 </section>
                 <!--    aside   texto    -->
 
-     <section id="section-txt" class="aside-txt">
+                <section id="section-txt" class="section-txt">
                     <h2>TEXTO</h2>
 
                     <div>
@@ -243,7 +247,7 @@
                             </div>
                         </div>
                     </div>
-        </div>
+    
         <!--color         -->
 
         <div>
@@ -304,12 +308,12 @@
                     </select>
                 </div>
             </div>
-            </div>
+        </div>
         </section>
-            </aside>
-        
-    </div>
-    <footer><samp>Hecho por Adriana Villafañe</samp></footer>
+        </aside>
+</div>
 
-    <script src="./app.js"></script>
+        <footer><samp>Hecho por Adriana Villafañe</samp></footer>
+
+        <script src="./app.js"></script>
 </body>
