@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*general*/
+
+body {
+    height: 100vh;
+    background-color: gray;
+}
+header {
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    color: antiquewhite;
+    height: 50%;
+}
+h1 {
+    font-family: "Kablammo", cursive;
+}
+
+.generator-container {
+    width: 60%;
+    height: 40vw;
+    margin: 5px auto;
+    background-color: pink;
+    border: 3px solid gold;
+    border-radius: 5px;
+}
+#container-img {
+    border: 2px solid black;
+    height: 90%;
+}
+
+.meme-txt {
+    height: 15%;
+    background-color: rgb(29, 29, 29);
+    color: antiquewhite;
+    justify-content: center;
+    text-align: center;
+}
+.img-central {
+    width: 100%;
+    height: 70%;
+    border: 2px solid black;
+}
+.container-btn-download {
+    display: flex;
+    justify-content: center;
+}
+#download-icon {
+    border: none;
+    margin: 5px auto;
+}
+/*  ASIDE*/
+
+#aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 38vw;
+    width: 25%;
+    margin: 2px 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(29, 29, 29);
+    color: antiquewhite;
+    line-height: 1.5;
+}
+
+#off-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+}
+.section-img,
+.section-txt {
+    display: flex;
+    width: 100%;
+    height: 35vw;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+.img-color {
+    display: flex;
+    justify-content: space-around;
+}
+option {
+    background-color: rgb(95, 93, 93);
+}
+input {
+    background-color: rgb(95, 93, 93);
+    color: antiquewhite;
+}
+/* circulo color input*/
+.color-input {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border: none;
+    display: inline-block;
+}
+#color-input::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+#color-input::-webkit-color-swatch-wrapper {
+    border-radius: 50%;
+    padding: 0;
+}
+/* termina circulo color input*/
+
+/* nombre del color*/
+
+#color-name {
+    margin-left: 20px;
+    text-align: center;
+}
+
+#reset-btn {
+    margin-top: 30px;
+    border: 2px solid gold;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*aside, section-txt oculto*/
+.section-txt {
+    display: none;
+}
+.btn-x {
+    align-items: end;
+}
+.organizer {
+    background-color: rgb(95, 93, 93);
+    display: flex;
+}
+
+footer {
+    text-align: center;
+}
