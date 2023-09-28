@@ -37,22 +37,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body class="ambos-modos  modo-claro modo-oscuro">
+<body class="all  clear-mode dark-mode">
     <div>
         <div>
             <!--         header           -->
             <header>
                 <div>
-                    <h1>Generador de Memes</h1>
+                    <h1>Meme Generator</h1>
                     <div>
-                        <a id="btn-img-oscuro"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif"
+                        <a id="btn-img-dark"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif"
                                 alt="imagen modo oscuro" />Imagen</a>
-                        <a id="btn-img-claro"><img src="./img/icons8-pila-de-fotos-modo-claro.gif"
+                        <a id="btn-img-clear"><img src="./img/icons8-pila-de-fotos-modo-claro.gif"
                                 alt="imagen modo claro" /></a>
                         <a id="btn-txt"><img src="./img/icons8-pluma.gif" alt="texto" />Texto</a>
-                        <a id="btn-modo-oscuro"><img src="./img/icons8-noche-modo-oscuro.gif" alt="modo oscuro" />Modo
+                        <a id="btn-dark-mode"><img src="./img/icons8-noche-modo-oscuro.gif" alt="modo oscuro" />Modo
                             Oscuro</a>
-                        <a id="btn-modo-claro"><img src="./img/icons8-noche-modo-claro.gif" alt="modo claro" /></a>
+                        <a id="btn-clear-mode"><img src="./img/icons8-noche-modo-claro.gif" alt="modo claro" /></a>
                     </div>
                 </div>
             </header>
@@ -60,20 +60,20 @@
 
             <!--                       main                                -->
             <!-- pongo un div que guarde el main y aside-->
-            <div class="organizador">
-            <main class="generador-contenedor">
-                <div id="contenedor-img">
-                    <p id="texto-superior-meme" class="meme-text">TOP TEXT</p>
+            <div class="organizer">
+            <main class="generator-container">
+                <div id="container-img">
+                    <p id="txt-upper-meme" class="meme-txt">TOP TEXT</p>
 
-                    <div class="imagen-central" src="" alt="" id="meme-img">
+                    <div class="img-central" src="" alt="" id="meme-img">
 
                     </div>
-                    <p id="texto-inferior-meme" class="meme-text">BOTTOM TEXT</p>
+                    <p id="txt-lower-meme" class="meme-txt">BOTTOM TEXT</p>
                     <!--      boton de descarga del meme    -->
 
                     <div>
-                        <div class="contenedor-btn-descarga">
-                            <a id="descarga-icono"><img src="./img/icons8-descargar.gif" /> </a>
+                        <div class="container-btn-download">
+                            <a id="download-icon"><img src="./img/icons8-descargar.gif"/> </a>
                         </div>
                     </div>
             </main>
@@ -84,38 +84,38 @@
             <aside id="aside">
                 <div clss="btn-x">
                     <div>
-                        <a id="cerrar-btn"><img src="./img/icons8-x-16.png"></a>
+                        <a id="off-btn"><img src="./img/icons8-x-16.png"></a>
                     </div>
                 </div>
-                <section id="seccion-img" class="section-img">
+                <section id="section-img" class="section-img">
                     <div>
-                        <h2 class="titulo-secundario">IMAGEN</h2>
+                        <h2>IMAGE</h2>
                         <label for="url"> URL:</label>
 
                         <input type="url" name="url" id="url-input" placeholder="https://example.com"
                             pattern="https://.*" size="24" required>
 
 
-                        <p>FONDO</p>
+                        <p>BACKGROUND</p>
                         <div>
                             <!--    input color    -->
                             <!-- agrego un div para el color y el nombre-->
                             <div class="img-color">
                             <div>
-                                <input type="color" value="#DC19F5" class="color-input" id="input-color">
+                                <input type="color" value="#DC19F5" class="color-input" id="color-input">
 
                                 <span id="color-name">#DC19F5</span>
                             </div>
 </div>
                             <div>
-                                <select id="filtros-fondo">
+                                <select id="filter-background">
 
-                                    <option value="unset">Ninguno</option>
-                                    <option value="lighten">Aclarar</option>
-                                    <option value="darken">Oscurecer</option>
-                                    <option value="difference">Diferencia</option>
-                                    <option value="luminosity">Luminosidad</option>
-                                    <option value="multiply">Multiplicar</option>
+                                    <option value="unset">None</option>
+                                    <option value="lighten">Clarify</option>
+                                    <option value="darken">Darken</option>
+                                    <option value="difference">Difference</option>
+                                    <option value="luminosity">Luminosity</option>
+                                    <option value="multiply">Multiply</option>
 
                                 </select>
 
@@ -125,49 +125,49 @@
 </div>
                         <!--      filtros para la imagen     -->
                         <div>
-                            <p>FILTROS</p>
-                            <div class="filtro-rango">
-                                <label for="brillo">BRILLO</label>
+                            <p>FILTER</p>
+                            <div class="filter-range">
+                                <label for="glow">GLOW</label>
                                 <input type="range" id="brightnes" min="0" max="1" value="0" step="0.1">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="opacidad">OPACIDAD</label>
+                            <div class="filter-range">
+                                <label for="opacity">OPACITY</label>
                                 <input type="range" id="opacity" min="0" max="1" value="0" step="0.1">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="contraste">CONTRASTE</label>
-                                <input type="range" id="contras" min="100" max="1000" value="100" step="100">
+                            <div class="filter-range">
+                                <label for="contrast">CONTRAST</label>
+                                <input type="range" id="contrast" min="100" max="1000" value="100" step="100">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="desenfoque">DESENFOQUE</label>
+                            <div class="filter-range">
+                                <label for="blur">BLUR</label>
                                 <input type="range" id="blur" min="0" max="10" value="0" step="0.5">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="">ESCALA DE GRISES</label>
+                            <div class="filter-range">
+                                <label for="grayscale">GRAYSCALE</label>
                                 <input type="range" id="grayscale" min="0" max="100" value="0">
                             </div>
-                            <div class="filtro-rango">
+                            <div class="filter-range">
                                 <label for="sepia">SEPIA</label>
                                 <input type="range" id="sepia" min="0" max="100" value="0">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="">HUE</label>
+                            <div class="filter-range">
+                                <label for="hue">HUE</label>
                                 <input type="range" id="hue" min="0" max="360" value="0">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="saturacion">SATURADO</label>
-                                <input type="range" id="saturate" min="100" max="1000" value="100" step="10">
+                            <div class="filter-range">
+                                <label for="saturation">SATURATION</label>
+                                <input type="range" id="saturation" min="100" max="1000" value="100" step="10">
                             </div>
-                            <div class="filtro-rango">
-                                <label for="negativo">NEGATIVO</label>
-                                <input type="range" id="invert" min="0" max="1" value="0" step="0.1">
+                            <div class="filter-range">
+                                <label for="negative">NEGATIVE</label>
+                                <input type="range" id="negative" min="0" max="1" value="0" step="0.1">
                             </div>
 
                         </div>
                     </div>
                     <!--                boton de refrescado                      -->
 
-                    <a id="reestablecer-btn">REESTABLECER FILTROS</a>
+                    <a id="reset-btn"><button>RESET FILTER</button></a>
 
                 </section>
                 <!--    aside   texto    -->
@@ -313,7 +313,7 @@
         </aside>
 </div>
 
-        <footer><samp>Hecho por Adriana Villafañe</samp></footer>
+        <footer><samp>© by Adriana Villafañe</samp></footer>
 
         <script src="./app.js"></script>
 </body>

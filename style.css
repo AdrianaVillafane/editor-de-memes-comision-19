@@ -6,7 +6,7 @@
 
 /*general*/
 
-.cuerpo {
+body {
     height: 100vh;
     background-color: gray;
 }
@@ -17,33 +17,33 @@ header {
     height: 50%;
 }
 
-.generador-contenedor {
+.generator-container {
     width: 60%;
     height: 40vw;
     margin: 5px auto;
     background-color: pink;
   
 }
-#contenedor-img{
+#container-img{
   border: 2px solid black;
   height: 90%;
 }
 
-.meme-text{
+.meme-txt{
   text-align: center;
   height: 15%;
   background-color: beige;
 }
-#meme-img{
+.img-central{
   width: 100%;
   height: 70%;
   border: 2px solid black;
 }
-.contenedor-btn-descarga{
+.container-btn-download{
   display: flex;
   justify-content: center;
 }
-#descarga-icono{
+#download-icon{
   border: none;
   margin: 5px auto;
   
@@ -54,7 +54,7 @@ header {
 display: flex;
 flex-direction: column;
 justify-content: center;
-height: 35vw;
+height: 38vw;
 width: 25%;
 margin: 2px 10px;
 border: 3px solid black;
@@ -63,7 +63,7 @@ border-radius: 20px;
 
 }
 
-  #cerrar-btn{
+  #off-btn{
     display: flex;
     justify-content: end;
     margin: 5px 10px
@@ -90,12 +90,12 @@ border-radius: 20px;
   border: none;
   display: inline-block;
 }
-#input-color::-webkit-color-swatch{
+#color-input::-webkit-color-swatch{
   border:none;
   border-radius: 50%;
   
 }
-#input-color::-webkit-color-swatch-wrapper{
+#color-input::-webkit-color-swatch-wrapper{
   border-radius: 50%;
   padding: 0;
  
@@ -109,12 +109,9 @@ border-radius: 20px;
 text-align: center;
    
 }
-.filtro-rango{
-  
-}
 
 
-#reestablecer-btn{
+#reset-btn{
   margin-top: 30px;
   border: 2px solid gold;
   text-align: center;
@@ -128,7 +125,7 @@ text-align: center;
 .btn-x{
   align-items: end;
 }
-.organizador{
+.organizer{
   background-color: rebeccapurple;
   display: flex;
 }
