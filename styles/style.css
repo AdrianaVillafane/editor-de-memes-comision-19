@@ -34,7 +34,7 @@
   height: 38vw;
   margin: 5px auto;
   margin-right: 70px;
-  background-color: pink;
+  background-color: #c0c0c0;
   border: 3px solid gold;
   border-radius: 5px;
 }
@@ -61,6 +61,7 @@
 .dark-mode .container-btn-download {
   display: flex;
   justify-content: center;
+  background-color: rgb(95, 93, 93);
 }
 .dark-mode #download-icon {
   border: none;
@@ -159,7 +160,7 @@ cursor: pointer;
 
 /* modo claro, oculto */
 
-.dark-mode #btn-clear-mode{
+.dark-mode  #btn-clear-mode{
   display: none;
 }
 
