@@ -1,33 +1,35 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*general*/
+/*DARK-MODE*/
 
-body {
+.dark-mode body {
   height: 100vh;
   background-color: gray;
 }
-header {
+.dark-mode header {
   background-color: rgb(29, 29, 29);
   text-align: center;
   color: antiquewhite;
   height: 50%;
 }
-h1 {
+.dark-mode h1 {
   font-family: "Kablammo", cursive;
 }
-.container-icons, a, img{
+.dark-mode .container-icons, a, img{
   padding: 5px 10px;
   cursor: pointer;
 }
-.organizer {
+.dark-mode .organizer {
   background-color: rgb(95, 93, 93);
   display: flex;
 }
-.generator-container {
+.dark-mode .generator-container {
   width: 60%;
   height: 38vw;
   margin: 5px auto;
@@ -36,14 +38,14 @@ h1 {
   border: 3px solid gold;
   border-radius: 5px;
 }
-#container-img {
+.dark-mode #container-img {
   border: 2px solid black;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.meme-txt {
+.dark-mode .meme-txt {
   height: 15%;
   background-color: rgb(29, 29, 29);
   color: antiquewhite;
@@ -51,22 +53,22 @@ h1 {
   padding-top: 20px;
   font-size: 22px;
 }
-.img-central {
+.dark-mode .img-central {
   width: 100%;
   height: 76%;
   border: 2px solid black;
 }
-.container-btn-download {
+.dark-mode .container-btn-download {
   display: flex;
   justify-content: center;
 }
-#download-icon {
+.dark-mode #download-icon {
   border: none;
   margin: 5px auto;
 }
 /*  ASIDE*/
 
-#aside {
+.dark-mode #aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,14 +82,14 @@ h1 {
   line-height: 1.5;
 }
 
-#off-btn {
+.dark-mode #off-btn {
 width: 24px;
 height: 24px;
 position: absolute;
 right: 25px;
 cursor: pointer;
 }
-.section-img,
+.dark-mode .section-img,
 .section-txt {
   display: flex;
   width: 100%;
@@ -96,31 +98,31 @@ cursor: pointer;
   font-size: 20px;
   padding: 10px 15px;
 }
-.img-color {
+.dark-mode .img-color {
   display: flex;
   justify-content: space-around;
 }
 /*select*/
-option {
+.dark-mode option {
   background-color: rgb(95, 93, 93);
 }
-input {
+.dark-mode input {
   background-color: rgb(95, 93, 93);
   color: antiquewhite;
 }
 /* circulo color input*/
-.color-input {
+.dark-mode .color-input {
   width: 30px;
   height: 30px;
   background: black;
   border: none;
   display: inline-block;
 }
-#color-input::-webkit-color-swatch {
+.dark-mode #color-input::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
 }
-#color-input::-webkit-color-swatch-wrapper {
+.dark-mode #color-input::-webkit-color-swatch-wrapper {
   border-radius: 50%;
   padding: 0;
 }
@@ -128,12 +130,12 @@ input {
 
 /* nombre del color*/
 
-#color-name {
+.dark-mode #color-name {
   margin-left: 20px;
   text-align: center;
 }
 
-#reset-btn {
+.dark-mode #reset-btn {
   margin-top: 30px;
   border: 2px solid gold;
   text-align: center;
@@ -142,25 +144,25 @@ input {
 }
 
 /*aside, section-txt oculto*/
-.section-txt {
+.dark-mode .section-txt {
   display: none;
 }
-.btn-x {
+.dark-mode .btn-x {
   align-items: end;
 }
 
 
-footer {
+.dark-mode footer {
   text-align: center;
 }
 
 
 /* modo claro, oculto */
 
-#btn-clear-mode{
+.dark-mode #btn-clear-mode{
   display: none;
 }
 
-#btn-img-clear{
+.dark-mode #btn-img-clear{
   display:none;
 }
