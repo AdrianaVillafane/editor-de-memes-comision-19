@@ -164,6 +164,10 @@ display: flex;
   display: flex;
   flex-direction: column;
 }
+.contorno{
+  display: flex;
+  justify-content: space-between;
+}
 .espaciado-interlineado{
   display: flex;
   padding: 10px;
