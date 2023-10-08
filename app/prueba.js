@@ -1,4 +1,4 @@
-FORMULARIOS => .value
+//FORMULARIOS => .value
 
 // console.log($("#text").value)
 // input
