@@ -75,10 +75,10 @@
                         <p id="txt-lower-meme" class="meme-txt dark-mode clear-mode">BOTTOM TEXT</p>
                         <!--      boton de descarga del meme    -->
 
-                        <div >
-                            <div class="container-btn-download dark-mode clear-mode">
+                        <div class="container-btn-download">
+                            <button type="button" id="download-btn" class="dark-mode clear-mode">
                                 <a id="download-icon" class="dark-mode clear-mode"><img src="./img/icons8-descargar.gif" /> </a>
-                            </div>
+                            </button>
                         </div>
                 </main>
                 <!-- termina Main-->
@@ -88,7 +88,7 @@
                 <aside id="aside"class="dark-mode clear-mode">
                     <div class="btn-x">
                         <div>
-                            <a id="off-btn"class="dark-mode clear-mode"><img src="./img/icons8-cerrar-ventana-48.png"></a>
+                            <a id="off-btn"class="dark-mode clear-mode"><i class="fa-regular fa-rectangle-xmark"></i></a>
                         </div>
                     </div>
                     <section id="section-img" class="section-img dark-mode clear-mode">
@@ -220,17 +220,17 @@
                             <!--  font family  -->
                             <select id="fonts">
 
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-                                <option id="" value=""></option>
-
+                                <option id="arial" value="Arial">Arial</option>
+                                <option id="arial-black" value="Arial Black">Arial Black</option>
+                                <option id="american-typewriter" value="American Typewriter"></option>
+                                <option id="comic-sans" value="Comic Sans MS">Comic Sans MS</option>
+                                <option id="helvetica" value="Helvetica">Helvetica</option>
+                                <option id="impact" value="Impact">Impact</option>
+                                <option id="verdane" value="Verdana">Verdana</option>
+                                <option id="times-new-roman" value="Times New Roman">Times New Roman</option>
+                                <option id="titan-one" value="Titan One">Titan One</option>
+                                <option id="open-sans" value="Open Sans">Open Sans</option>
+                                <option id="bangers" value="Bangers">Bangers</option>
 
                             </select>
 
@@ -317,7 +317,7 @@
             </div>
 
             <footer class="dark-mode clear-mode">
-                <samp>© by Adriana Villafañe</samp>
+                <samp>© by Adriana Villafañe, 2023</samp>
             </footer>
 
             <script src="./app/app.js"></script>
