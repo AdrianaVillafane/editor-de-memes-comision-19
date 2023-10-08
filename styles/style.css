@@ -65,7 +65,7 @@
 }
 .dark-mode #download-icon {
   border: none;
-  margin: 5px auto;
+  margin: 1px auto;
 }
 /*  ASIDE*/
 
@@ -89,6 +89,7 @@ height: 24px;
 position: absolute;
 right: 25px;
 cursor: pointer;
+background-color: beige;
 }
 .dark-mode .section-img,
 .section-txt {
