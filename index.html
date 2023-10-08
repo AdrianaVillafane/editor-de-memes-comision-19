@@ -53,10 +53,12 @@
 
                         <a id="btn-txt"><img src="./img/icons8-pluma.gif" alt="texto" />Text</a>
 
-                        <a id="btn-dark-mode" class="dark-mode"><img src="./img/icons8-noche-modo-oscuro.gif" alt="modo oscuro" />Dark Mode
+                        <a id="btn-dark-mode" class="dark-mode"><img src="./img/icons8-noche-modo-oscuro.gif"
+                                alt="modo oscuro" />Dark Mode
                         </a>
 
-                        <a id="btn-clear-mode" class="clear-mode"><img src="./img/icons8-noche-modo-claro.gif" alt="modo claro" /></a>
+                        <a id="btn-clear-mode" class="clear-mode"><img src="./img/icons8-noche-modo-claro.gif"
+                                alt="modo claro" /></a>
                     </div>
                 </div>
             </header>
@@ -77,7 +79,8 @@
 
                         <div class="container-btn-download">
                             <button type="button" id="download-btn" class="dark-mode clear-mode">
-                                <a id="download-icon" class="dark-mode clear-mode"><img src="./img/icons8-descargar.gif" /> </a>
+                                <a id="download-icon" class="dark-mode clear-mode"><img
+                                        src="./img/icons8-descargar.gif" /> </a>
                             </button>
                         </div>
                 </main>
@@ -85,10 +88,11 @@
 
                 <!--     aside img filtros     -->
 
-                <aside id="aside"class="dark-mode clear-mode">
+                <aside id="aside" class="dark-mode clear-mode">
                     <div class="btn-x">
                         <div>
-                            <a id="off-btn"class="dark-mode clear-mode"><i class="fa-regular fa-rectangle-xmark"></i></a>
+                            <a id="off-btn" class="dark-mode clear-mode"><i
+                                    class="fa-regular fa-rectangle-xmark"></i></a>
                         </div>
                     </div>
                     <section id="section-img" class="section-img dark-mode clear-mode">
@@ -106,7 +110,8 @@
                                 <!-- agrego un div para el color y el nombre-->
                                 <div class="img-color dark-mode clear-mode">
                                     <div>
-                                        <input type="color" value="#DC19F5" class="color-input dark-mode clear-mode" id="color-input">
+                                        <input type="color" value="#DC19F5" class="color-input dark-mode clear-mode"
+                                            id="color-input">
 
                                         <span id="color-name" class="dark-mode clear-mode">#DC19F5</span>
                                     </div>
@@ -180,11 +185,10 @@
 
                         <div>
                             <!--Texto superior        -->
-                            <h3>SUPERIOR</h3>
+                            <h5>SUPERIOR</h5>
                             <textarea id="top-text">TOP TEXT</textarea>
 
                             <div>
-
                                 <!--checkbox               -->
                                 <form action="#">
                                     <p>
@@ -198,7 +202,7 @@
                             </div>
 
                             <!--   boton de texto -->
-                            <h3>INFERIOR</h3>
+                            <h5>INFERIOR</h5>
                             <textarea id="">BOTTOM TEXT</textarea>
 
                             <div>
@@ -208,7 +212,7 @@
                                     <p>
                                         <label>
                                             <input id="txt-inf-no" type="checkbox" />
-                                            <span>Sin Texto Superior</span>
+                                            <span>Sin Texto Inferior</span>
                                         </label>
                                     </p>
                                 </form>
@@ -216,8 +220,9 @@
                             </div>
                         </div>
                         <div>
-                            <h3>FUENTE</h3>
+                            <h5>FUENTE</h5>
                             <!--  font family  -->
+                            <div class="font-size-alig">
                             <select id="fonts">
 
                                 <option id="arial" value="Arial">Arial</option>
@@ -241,7 +246,7 @@
                             <!--alineacion del texto meme             -->
 
                             <div>
-                                <div>
+                                <div class="alignment">
                                     <a id="alineacion-izq"><i class="fa-solid fa-align-left"></i></a>
 
                                     <a id="alineacion-cent"><i class="fa-solid fa-align-center"></i></a>
@@ -249,21 +254,21 @@
                                     <a id="alineacion-der"><i class="fa-solid fa-align-right"></i></a>
                                 </div>
                             </div>
+                            </div>
                         </div>
 
                         <!--color         -->
 
                         <div>
                             <div>
+                                <h5>COLOR</h5>
                                 <div>
-                                    <h3>COLOR</h3>
-
                                     <input type="color" id="" value="#000000">
                                     <span id="">#000000</span>
                                 </div>
                                 <!--background       -->
                                 <div>
-                                    <h3>FONDO</h3>
+                                    <h5>FONDO</h5>
 
                                     <input type="color" id="" value="#ffffff" </div>
                                 </div>
@@ -280,7 +285,7 @@
                                 </div>
                                 <!--       efectos en la fuente              -->
                                 <div>
-                                    <h3>CONTORNO</h3>
+                                    <h5>CONTORNO</h5>
                                     <div>
                                         <a id="">Ninguno</a>
 
@@ -292,14 +297,14 @@
                                 </div>
                                 <!--                   espaciado    -->
                                 <div>
-                                    <h3>ESPACIADO</h3>
+                                    <h5>ESPACIADO</h5>
                                     <div>
                                         <input id="" type="number" min="5" max="40" value="25">
                                     </div>
                                 </div>
                                 <!--                    -->
                                 <div>
-                                    <h3>INTERLINEADO</h3>
+                                    <h5>INTERLINEADO</h5>
                                     <select name="" id="">
                                         <option value="0.8">0.8</option>
                                         <option value="1">1</option>
@@ -321,4 +326,5 @@
             </footer>
 
             <script src="./app/app.js"></script>
+            <script src="./app/prueba.js"></script>
 </body>
