@@ -160,6 +160,15 @@ cursor: pointer;
 .alignment{
 display: flex;
 }
+.color-fondo{
+  display: flex;
+  flex-direction: column;
+}
+.espaciado-interlineado{
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
 .dark-mode .btn-x {
   align-items: end;
 }
