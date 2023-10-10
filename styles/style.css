@@ -1,3 +1,17 @@
+::root{
+  --background-intenso:#181818;
+  --background-medio:#808080;
+  --background-suave:#ababab;
+  --font-color-intenso:#181818;
+  --font-color-medio:#192041;
+  --font-color-suave:#faebd7;
+}
+
+[data-mode="clear-mode"]{
+  --background-intenso:#ababab;
+  --background-medio:#e7e7e7;
+  --background-suave:#e6e6e6;
+}
 *,
 *::before,
 *::after {
@@ -8,14 +22,14 @@
 
 /*DARK-MODE*/
 
-.dark-mode body {
+ body {
   height: 100vh;
-  background-color: gray;
+  background-color:var(--background-medio);
 }
 .dark-mode header {
   background-color: rgb(29, 29, 29);
   text-align: center;
-  color: antiquewhite;
+  color: #faebd7;
   height: 50%;
 }
 .dark-mode h1 {
