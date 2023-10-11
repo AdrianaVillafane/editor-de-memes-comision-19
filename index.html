@@ -45,20 +45,15 @@
                 <div>
                     <h1 class="">Meme Generator</h1>
                     <div class="container-icons">
-                        <a id="btn-img-dark" class="dark-mode"><img src="./img/icons8-pila-de-fotos-modo-oscuro.gif"
-                                alt="imagen modo oscuro" />Image</a>
+                        <a id="btn-img-dark" class=""><i class="fa-solid fa-image"></i>Image</a>
 
-                        <a id="btn-img-clear" class="clear-mode"><img src="./img/icons8-pila-de-fotos-modo-claro.gif"
-                                alt="imagen modo claro" /></a>
+                        <a id="btn-txt"><i class="fa-solid fa-font"></i>Text</a>
 
-                        <a id="btn-txt"><img src="./img/icons8-pluma.gif" alt="texto" />Text</a>
+                        <button class="change-theme">
+                             <i class="fa-solid fa-lightbulb"id="btn-dark-mode">Dark</i>
 
-                        <a id="btn-dark-mode" class="dark-mode"><img src="./img/icons8-noche-modo-oscuro.gif"
-                                alt="modo oscuro" />Dark Mode
-                        </a>
-
-                        <a id="btn-clear-mode" class="clear-mode"><img src="./img/icons8-noche-modo-claro.gif"
-                                alt="modo claro" /></a>
+                             <i class="fa-regular fa-lightbulb hidden"id="btn-clear-mode">Clear</i>
+                        </button>
                     </div>
                 </div>
             </header>
@@ -223,46 +218,45 @@
                             <h5>FUENTE</h5>
                             <!--  font family  -->
                             <div class="font-size-alig">
-                            <select id="fonts">
+                                <select id="fonts">
 
-                                <option id="arial" value="Arial">Arial</option>
-                                <option id="arial-black" value="Arial Black">Arial Black</option>
-                                <option id="american-typewriter" value="American Typewriter"></option>
-                                <option id="comic-sans" value="Comic Sans MS">Comic Sans MS</option>
-                                <option id="helvetica" value="Helvetica">Helvetica</option>
-                                <option id="impact" value="Impact">Impact</option>
-                                <option id="verdane" value="Verdana">Verdana</option>
-                                <option id="times-new-roman" value="Times New Roman">Times New Roman</option>
-                                <option id="titan-one" value="Titan One">Titan One</option>
-                                <option id="open-sans" value="Open Sans">Open Sans</option>
-                                <option id="bangers" value="Bangers">Bangers</option>
+                                    <option id="arial" value="Arial">Arial</option>
+                                    <option id="arial-black" value="Arial Black">Arial Black</option>
+                                    <option id="american-typewriter" value="American Typewriter"></option>
+                                    <option id="comic-sans" value="Comic Sans MS">Comic Sans MS</option>
+                                    <option id="helvetica" value="Helvetica">Helvetica</option>
+                                    <option id="impact" value="Impact">Impact</option>
+                                    <option id="verdane" value="Verdana">Verdana</option>
+                                    <option id="times-new-roman" value="Times New Roman">Times New Roman</option>
+                                    <option id="titan-one" value="Titan One">Titan One</option>
+                                    <option id="open-sans" value="Open Sans">Open Sans</option>
+                                    <option id="bangers" value="Bangers">Bangers</option>
 
-                            </select>
+                                </select>
 
-                            <div>
-                                <input type="number" name="Font size" id="font-size" min="12" max="30" value="12">
+                                <div>
+                                    <input type="number" name="Font size" id="font-size" min="12" max="30" value="12">
 
-                            </div>
-                            <!--alineacion del texto meme             -->
-
-                            <div>
-                                <div class="alignment">
-                                    <a id="alineacion-izq"><i class="fa-solid fa-align-left"></i></a>
-
-                                    <a id="alineacion-cent"><i class="fa-solid fa-align-center"></i></a>
-
-                                    <a id="alineacion-der"><i class="fa-solid fa-align-right"></i></a>
                                 </div>
-                            </div>
+                                <!--alineacion del texto meme             -->
+
+                                <div>
+                                    <div class="alignment">
+                                        <a id="alineacion-izq"><i class="fa-solid fa-align-left"></i></a>
+
+                                        <a id="alineacion-cent"><i class="fa-solid fa-align-center"></i></a>
+
+                                        <a id="alineacion-der"><i class="fa-solid fa-align-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!--color         -->
 
-                        
-                            <div>
-                                <div class="color-fondo"
-                                <h5>COLOR</h5>
+
+                        <div>
+                            <div class="color-fondo" <h5>COLOR</h5>
                                 <div>
                                     <input type="color" id="color-font" value="#000000">
                                     <span id="">#000000</span>
@@ -274,34 +268,34 @@
                                     <input type="color" id="color" value="#ffffff" </div>
                                 </div>
                             </div>
-                                <!--checkbox -->
-                                <div>
-                                    <form action="">
-                                        <p>
-                                            <label>
-                                                <input id="sin-fondo" type="checkbox" />
-                                                <span>Fondo Transparente</span>
-                                            </label>
-                                        </p>
-                                    </form>
-                                </div>
-                                
-                                <!--       efectos en la fuente              -->
-                                <div>
-                                    <h5>CONTORNO</h5>
-                                    <div class="contorno">
-                                            <buttom><a id="">Ninguno</a></buttom> 
-                                                <buttom> <a id="">Claro</a></buttom> 
-                                            <buttom> <a id="">Oscuro</a></buttom>
+                            <!--checkbox -->
+                            <div>
+                                <form action="">
+                                    <p>
+                                        <label>
+                                            <input id="sin-fondo" type="checkbox" />
+                                            <span>Fondo Transparente</span>
+                                        </label>
+                                    </p>
+                                </form>
+                            </div>
 
-                                    </div>
+                            <!--       efectos en la fuente              -->
+                            <div>
+                                <h5>CONTORNO</h5>
+                                <div class="contorno">
+                                    <buttom><a id="">Ninguno</a></buttom>
+                                    <buttom> <a id="">Claro</a></buttom>
+                                    <buttom> <a id="">Oscuro</a></buttom>
+
                                 </div>
-                                <!--          espaciado    -->
-                                         <div class="espaciado-interlineado">    
+                            </div>
+                            <!--          espaciado    -->
+                            <div class="espaciado-interlineado">
                                 <div>
                                     <h5>ESPACIADO</h5>
                                     <div>
-                                     
+
                                         <input id="" type="number" min="5" max="40" value="25">
                                     </div>
                                 </div>
@@ -319,17 +313,17 @@
                                     </select>
                                 </div>
 
-                                </div>
                             </div>
                         </div>
-                    </section>
-                </aside>
             </div>
+            </section>
+            </aside>
+        </div>
 
-            <footer class="dark-mode clear-mode">
-                <samp>© by Adriana Villafañe, 2023</samp>
-            </footer>
+        <footer class="dark-mode clear-mode">
+            <samp>© by Adriana Villafañe, 2023</samp>
+        </footer>
 
-            <script src="./app/app.js"></script>
-            <script src="./app/prueba.js"></script>
+        <script src="./app/app.js"></script>
+        <script src="./app/prueba.js"></script>
 </body>
