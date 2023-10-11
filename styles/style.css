@@ -211,6 +211,11 @@ footer {
     color: var(--font-color-intenso);
 }
 
-/* modo claro, oculto */
+fieldset{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px ;
+    padding: 5px;
+}
 
 
