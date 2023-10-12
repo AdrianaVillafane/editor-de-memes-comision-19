@@ -37,11 +37,10 @@ header {
     color: var(--font-color-suave);
     height: 50%;
 }
-
+/* ICONO OCULTO*/
 .change-theme .hidden{
     display: none;
 }
-
 
 
 /* Agrega estilos para otros elementos según sea necesario */
@@ -149,11 +148,11 @@ input {
     border: none;
     display: inline-block;
 }
-#color-input::-webkit-color-swatch {
+#color-picker::-webkit-color-swatch {
     border: none;
     border-radius: 50%;
 }
-#color-input::-webkit-color-swatch-wrapper {
+#color-picker::-webkit-color-swatch-wrapper {
     border-radius: 50%;
     padding: 0;
 }
@@ -173,7 +172,7 @@ input {
     border-radius: 10px;
     cursor: pointer;
 }
-.section-txt {
+.hidden{
     display: none;
 }
 

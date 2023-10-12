@@ -43,3 +43,17 @@
 
 
 
+//Dounload ----> en revision
+const downloadButton = document.getElementById("download-btn");
+const meme = document.getElementById("#container-img");
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+
+const downloadMeme = () => {
+  domtoimage.toBlob($("#container-img")).then((blob) => {
+      saveAs(blob, "my-meme.png")
+  })
+}
+
+//

@@ -44,12 +44,12 @@
             <header class="">
                 <div>
                     <h1 class="">Meme Generator</h1>
-                    <div class="container-icons">
-                        <button><i id="btn-img-dark" class="fa-solid fa-image">Image</i></button>
+                    <div id="container-icons">
+                        <button><i id="btn-img" class="fa-solid fa-image">Image</i></button>
 
                         <button><i id="btn-txt" class="fa-solid fa-font">Text</i></button>
 
-                        <button class="change-theme">
+                        <button id="change-theme">
                             <i class="fa-solid fa-lightbulb " id="btn-dark-mode">Dark</i>
 
                             <i class="fa-regular fa-lightbulb  hidden" id="btn-clear-mode">Clear</i>
@@ -101,12 +101,12 @@
                             <div>
                                 <!--    input color    -->
                                 <!-- agrego un div para el color y el nombre-->
-                                <div class="img-color dark-mode clear-mode">
+                                <div class="img-color clear-mode">
                                     <div>
-                                        <input type="color" value="#DC19F5" class="color-input dark-mode clear-mode"
-                                            id="color-input">
+                                        <input type="color" value="#DC19F5" class="color-input clear-mode"
+                                            id="color-picker">
 
-                                        <span id="color-name" class="dark-mode clear-mode">#DC19F5</span>
+                                        <span id="color-name" class="clear-mode">#DC19F5</span>
                                     </div>
 
                                     <select id="filter-background">
@@ -173,7 +173,7 @@
                     </section>
                     <!--    aside   texto    -->
 
-                    <section id="section-txt" class="section-txt">
+                    <section id="section-txt" class="section-txt hidden">
                         <h2>TEXTO</h2>
 
                         <div>
