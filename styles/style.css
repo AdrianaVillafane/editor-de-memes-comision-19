@@ -38,12 +38,11 @@ header {
     height: 50%;
 }
 
-.change-theme{
-    width:30px;
-}
-.hidden{
+.change-theme .hidden{
     display: none;
 }
+
+
 
 /* Agrega estilos para otros elementos según sea necesario */
 

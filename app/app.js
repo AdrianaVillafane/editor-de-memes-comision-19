@@ -13,7 +13,7 @@ $(".change-theme").addEventListener("click", () => {
     $("#btn-clear-mode").classList.toggle("hidden")
 })
 
-//IMAGEN MODO OSCURO-CLARO// ------->LAMPARITA  no FUNCIONA
+//IMAGEN MODO OSCURO-CLARO// ------->LAMPARITA   FUNCIONA
 
 
 
