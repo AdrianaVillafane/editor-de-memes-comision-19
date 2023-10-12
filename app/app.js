@@ -23,8 +23,6 @@ $(".change-theme").addEventListener("click", () => {
 
 
 
-
-
 //COLOR DEL BACKGROUND DEL MEME   ----> FUNCIONA
 $("#color").addEventListener("input", (e) => {
       $("#meme-img").style.backgroundColor = e.target.value
@@ -40,7 +38,7 @@ $("#color-font").addEventListener("input", (e) =>{
 
 //Dounload
 const downloadButton = document.getElementById("download-btn");
-const meme = document.getElementById("meme-container");
+const meme = document.getElementById("#container-img");
 
 downloadButton.addEventListener("click", () => downloadMeme());
 
