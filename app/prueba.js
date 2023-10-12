@@ -43,20 +43,3 @@
 
 
 
-:root {
-    --background-primary: #181818;
-    --background-secondary: #192041;
-    --font-color-primary: #e7e7e7;
-    --font-color-secondary: #e7e7e7;
-    --button-color-primary: #430373;
-    --button-color-hover: #4f038a;
-}
-
-[data-theme="light-theme"] {
-    --background-primary: #e7e7e7;
-    --background-secondary: #ababab;
-    --font-color-primary: #181818;
-    --font-color-secondary: #e7e7e7;
-    --button-color-primary: #7b26bc;
-    --button-color-hover: #8e34d2;   
-}

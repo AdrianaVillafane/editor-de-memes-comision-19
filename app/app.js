@@ -13,11 +13,15 @@ $(".change-theme").addEventListener("click", () => {
     $("#btn-clear-mode").classList.toggle("hidden")
 })
 
-//IMAGEN MODO OSCURO-CLARO// ------->LAMPARITA FUNCIONA
+//IMAGEN MODO OSCURO-CLARO// ------->LAMPARITA  no FUNCIONA
+
+
 
 $(".change-theme").addEventListener("click", () => {
   $(".change-theme").classList.toggle("on")
 })
+
+
 
 
 
@@ -34,4 +38,15 @@ $("#color-font").addEventListener("input", (e) =>{
   $("#txt-lower-meme").style.color = e.target.value
 })
 
-//
+//Dounload
+const downloadButton = document.getElementById("download-btn");
+const meme = document.getElementById("meme-container");
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+
+const downloadMeme = () => {
+  domtoimage.toBlob($("#container-img")).then((blob) => {
+      saveAs(blob, "my-meme.png")
+  })
+}
