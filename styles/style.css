@@ -38,7 +38,7 @@ header {
     height: 50%;
 }
 /* ICONO OCULTO*/
-.change-theme .hidden{
+#change-theme .hidden{
     display: none;
 }
 

@@ -71,4 +71,4 @@ const image
 const brightnessSlider
 const brightnessValue
 const grayscaleSlider;
-const grayscaleValue;
+const grayscaleValue;*/
