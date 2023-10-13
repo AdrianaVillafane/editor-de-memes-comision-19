@@ -111,27 +111,7 @@ colorInput.addEventListener("input", function () {
     memeImg.style.backgroundColor = color;
 });
 
-//FILTERS---------> @ @AdrianaVillafane
+//FILTERS---------> 
 const brigtnessRange = document.getElementById("brightness"); 
 const opacityRange = document.getElementById("opacity"); 
 const contrastRange = document.getElementById("contrast"); 
-const blurRange = document.getElementById("blur"); 
-const grayScaleRange = document.getElementById("grayscale"); 
-const sepiaRange = document.getElementById("sepia"); 
-const hueRange = document.getElementById("hue"); 
-const saturationRange = document.getElementById("saturation"); 
-const invertRange = document.getElementById("invert"); 
-
-let imgFilter = () => {
-  img.style.filter = `brightness(${brigtnessRange.value}) opacity(${opacityRange.value}) contrast(${contrastRange.value}%) blur(${blurRange.value}px) grayscale(${grayScaleRange.value}%) sepia(${sepiaRange.value}%) hue-rotate(${hueRange.value}deg) saturation(${saturationRange.value}%) invert(${invertRange.value})`;
-};
-
-brigtnessRange.addEventListener("input", imgFilter);
-opacityRange.addEventListener("input", imgFilter);
-contrastRange.addEventListener("input", imgFilter);
-blurRange.addEventListener("input", imgFilter);
-grayScaleRange.addEventListener("input", imgFilter);
-sepiaRange.addEventListener("input", imgFilter);
-hueRange.addEventListener("input", imgFilter);
-saturationRange.addEventListener("input", imgFilter);
-invertRange.addEventListener("input", imgFilter);
