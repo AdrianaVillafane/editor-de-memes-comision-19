@@ -111,54 +111,27 @@ colorInput.addEventListener("input", function () {
     memeImg.style.backgroundColor = color;
 });
 
-//FILTROS
-const filters = () => {
-  memeImg.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) blur(${blurInput.value}) contrast(${contrastInput.value}%) grayscale(${grayscaleInput.value}%) hue-rotate(${hueRotateInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
+//FILTERS---------> @ @AdrianaVillafane
+const brigtnessRange = document.getElementById("brightness"); 
+const opacityRange = document.getElementById("opacity"); 
+const contrastRange = document.getElementById("contrast"); 
+const blurRange = document.getElementById("blur"); 
+const grayScaleRange = document.getElementById("grayscale"); 
+const sepiaRange = document.getElementById("sepia"); 
+const hueRange = document.getElementById("hue"); 
+const saturationRange = document.getElementById("saturation"); 
+const invertRange = document.getElementById("invert"); 
+
+let imgFilter = () => {
+  img.style.filter = `brightness(${brigtnessRange.value}) opacity(${opacityRange.value}) contrast(${contrastRange.value}%) blur(${blurRange.value}px) grayscale(${grayScaleRange.value}%) sepia(${sepiaRange.value}%) hue-rotate(${hueRange.value}deg) saturation(${saturationRange.value}%) invert(${invertRange.value})`;
 };
 
-//ESCALA DE BRILLO-
-// Obtener referencias a los elementos del DOM
-const image = document.getElementById("meme-img");
-
-
-const brightnessSlider = document.getElementById("brightness-slider");
-
-// Manejar el evento de cambio del input range
-brightnessSlider.addEventListener("input", () => {
-  console.log("funcion brillo  se ejecuta");
-  // Obtener el valor del input range
-  const brightnessValue = brightnessSlider.value;
-
-  // Aplicar el filtro de brillo a la imagen
-  memeImg.style.filter = `brightness(${brightnessValue}%)`;
-  filters();
-});
-
-//OPACITY//
-//obtengo datos
-const opacitySlider = document.getElementById("opacity-slider")
-//manejo evento de cambio en slider
-opacitySlider.addEventListener("input",()=> {
-  console.log("opacity ok");
-  const opacityValue = opacitySlider.value
-  //aplico a la imagen
-  memeImg.style.filter = `opacity(${opacityValue})`;
-  filters();
-})
-
-
-
-//ESCALA DE GRISES-FUNCIONANDO
-// Obtener referencias a los elementos del DOM
-const grayscaleSlider = document.getElementById("grayscale");
-
-// Manejar el evento de cambio del input range
-grayscaleSlider.addEventListener("input", () => {
-  console.log("funcion de grises ok");
-    // Obtener el valor del input range
-    const  grayscaleValue = grayscaleSlider.value;
-
-    // Aplicar el filtro de escala de grises a la imagen
-    memeImg.style.filter = `grayscale(${grayscaleValue}%)`;
-    filters();
-});
+brigtnessRange.addEventListener("input", imgFilter);
+opacityRange.addEventListener("input", imgFilter);
+contrastRange.addEventListener("input", imgFilter);
+blurRange.addEventListener("input", imgFilter);
+grayScaleRange.addEventListener("input", imgFilter);
+sepiaRange.addEventListener("input", imgFilter);
+hueRange.addEventListener("input", imgFilter);
+saturationRange.addEventListener("input", imgFilter);
+invertRange.addEventListener("input", imgFilter);
