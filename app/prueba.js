@@ -44,7 +44,7 @@
 
 //-----> VARIABLES <------//
 
-const currentTheme;
+/*const currentTheme;
 const downloadButton;
 const meme
 const downloadMeme
