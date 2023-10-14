@@ -23,7 +23,7 @@ $("#change-theme").addEventListener("click", () => {
 
 //Dounload ----> en revision
 const downloadButton = document.getElementById("download-btn");
-const meme = document.getElementById("#container-img");
+const meme = document.getElementById("container-img");
 
 downloadButton.addEventListener("click", () => downloadMeme());
 
