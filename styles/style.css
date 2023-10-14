@@ -90,7 +90,7 @@ img {
 .container-btn-download {
     display: flex;
     justify-content: center;
-    background-color: rgb(95, 93, 93);
+    margin-top: 10px;
 }
 #download-icon {
     border: none;
