@@ -115,3 +115,10 @@ colorInput.addEventListener("input", function () {
 const brigtnessRange = document.getElementById("brightness"); 
 const opacityRange = document.getElementById("opacity"); 
 const contrastRange = document.getElementById("contrast"); 
+const blurRange = document.getElementById("blur");
+const grayscaleRange = document.getElementById("grayscale");
+const sepiaRange = document.getElementById("sepia");
+const hueRange = document.getElementById("hue");
+const saturationRange = document.getElementById("saturation");
+const negativeRange = document.getElementById("invert");
+
