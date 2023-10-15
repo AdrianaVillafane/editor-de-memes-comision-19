@@ -89,10 +89,19 @@ const changeBackground = () => {
     memeImg.style.backgroundRepeat = "no-repeat";
     memeImg.style.backgroundPosition = "center";
 };
-//BOTON COLOR------->FUNCIONANDO
+//BOTON COLOR------->FUNCIONANDO pero falta la mezcla del fondo u.u
 
+const containerImg = document.getElementById("container-img")
 const colorPicker = document.getElementById("color-picker");
 const colorName = document.getElementById("color-name");
+const imgBackgroundColorBlend = document.getElementById("filter-background");
+
+colorPicker.addEventListener("change" , ()=> {
+  const backgroundImage = colorPicker.value;
+  (colorName.innerHTML= backgroundImage),
+  (img.style.backgroundColor = backgroundImage)
+})
+
 
 const changeBackgroundMeme = () => {
     let chosenColor = colorPicker.value;
@@ -104,12 +113,17 @@ colorPicker.addEventListener("input", () => changeBackgroundMeme());
 //COLOR DE FONDO, conteiner de imagen
 // Obtengo los elementos del DOM
 const colorInput = document.getElementById("color-picker");
-
 // Agrego un evento de escucha al campo de entrada
 colorInput.addEventListener("input", function () {
     let color = colorInput.value;
     memeImg.style.backgroundColor = color;
 });
+
+
+
+
+
+
 
 //FILTERS---------> 
 const brigtnessRange = document.getElementById("brightness"); 
@@ -120,5 +134,18 @@ const grayscaleRange = document.getElementById("grayscale");
 const sepiaRange = document.getElementById("sepia");
 const hueRange = document.getElementById("hue");
 const saturationRange = document.getElementById("saturation");
-const negativeRange = document.getElementById("invert");
+const invertRange = document.getElementById("invert");
 
+let imgFilter = () => {
+  img.style.filter = `brightness(${brigtnessRange.value}) opacity(${opacityRange.value}) contrast(${contrastRange.value}%) blur(${blurRange.value}px) grayscale(${grayscaleRange.value}%) sepia(${sepiaRange.value}%) hue-rotate(${hueRange.value}deg) saturation(${saturationRange.value}%) invert(${invertRange.value})`;
+};
+
+brigtnessRange.addEventListener("input", imgFilter);
+opacityRange.addEventListener("input", imgFilter);
+contrastRange.addEventListener("input", imgFilter);
+blurRange.addEventListener("input", imgFilter);
+grayscaleRange.addEventListener("input", imgFilter);
+sepiaRange.addEventListener("input", imgFilter);
+hueRange.addEventListener("input", imgFilter);
+saturationRange.addEventListener("input", imgFilter);
+invertRange.addEventListener("input", imgFilter);
