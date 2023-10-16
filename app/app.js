@@ -33,6 +33,13 @@ const downloadMeme = () => {
       saveAs(blob, "my-meme.png")
   })
 }
+//BOTON DE CIERRE DE ASIDE no funciona
+const offAsideBtn = document.getElementById("off-btn"); // botón X de cierre aside
+const aside = document.getElementById("aside"); 
+
+offAsideBtn.addEventListener("click", () => {
+  aside.classList.add("hidden");
+});
 
 
 //COLOR DEL BACKGROUND DEL MEME   ----> FUNCIONA
