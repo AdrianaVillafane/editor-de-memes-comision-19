@@ -73,6 +73,9 @@ img {
     display: flex;
     flex-direction: column;
 }
+.meme-img{
+    height: 70%;
+}
 
 .meme-txt {
     height: 15%;

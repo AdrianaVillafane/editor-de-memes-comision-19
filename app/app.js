@@ -91,33 +91,33 @@ const changeBackground = () => {
 };
 //BOTON COLOR------->FUNCIONANDO pero falta la mezcla del fondo u.u
 
-const containerImg = document.getElementById("container-img")
+const containerImg = document.getElementById("container-img");
 const colorPicker = document.getElementById("color-picker");
 const colorName = document.getElementById("color-name");
-const imgBackgroundColorBlend = document.getElementById("filter-background");
+const imgBackgroundColorMix = document.getElementById("filter-background");
 
-colorPicker.addEventListener("change" , ()=> {
-  const backgroundImage = colorPicker.value;
-  (colorName.innerHTML= backgroundImage),
-  (img.style.backgroundColor = backgroundImage)
-})
+colorPicker.addEventListener("change", () => {
+  const backgroundColor = colorPicker.value;
+  colorName.innerHTML = backgroundColor;
+  containerImg.style.backgroundColor = backgroundColor;
+});
 
+imgBackgroundColorMix.addEventListener("change", () => {
+  let mix = imgBackgroundColorMix.value;
+  containerImg.style.mixBlendMode = mix;
+});
 
+// Función para cambiar el fondo del meme
 const changeBackgroundMeme = () => {
-    let chosenColor = colorPicker.value;
-    colorName.innerHTML = `${chosenColor}`;
+  let chosenColor = colorPicker.value;
+  colorName.innerHTML = `${chosenColor}`;
+  containerImg.style.backgroundColor = chosenColor; // Cambia el color de fondo del contenedor
+  img.style.backgroundColor = chosenColor; // Cambia el color de fondo de la imagen
 };
 
-colorPicker.addEventListener("input", () => changeBackgroundMeme());
+colorPicker.addEventListener("input", changeBackgroundMeme);
 
-//COLOR DE FONDO, conteiner de imagen
-// Obtengo los elementos del DOM
-const colorInput = document.getElementById("color-picker");
-// Agrego un evento de escucha al campo de entrada
-colorInput.addEventListener("input", function () {
-    let color = colorInput.value;
-    memeImg.style.backgroundColor = color;
-});
+// También has añadido un evento "input" para cambiar el color de fondo en tiempo real mientras el usuario arrastra el selector de color. Esto es una mejora adicional para dar retroalimentación en tiempo real al usuario mientras selecciona el color.
 
 
 
