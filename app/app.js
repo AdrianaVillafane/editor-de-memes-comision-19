@@ -129,7 +129,6 @@ const changeBackgroundMeme = () => {
 
 colorPicker.addEventListener("input", changeBackgroundMeme);
 
-// También has añadido un evento "input" para cambiar el color de fondo en tiempo real mientras el usuario arrastra el selector de color. Esto es una mejora adicional para dar retroalimentación en tiempo real al usuario mientras selecciona el color.
 
 
 
