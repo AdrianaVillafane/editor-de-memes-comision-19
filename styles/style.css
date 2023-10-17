@@ -101,7 +101,7 @@ img {
 }
 /*  ASIDE*/
 
-#aside {
+.aside {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,6 +113,9 @@ img {
     background-color: var(--background-intenso);
     color: var(--font-color-suave);
     line-height: 1.3;
+}
+.ocultar{
+    display: none;
 }
 /*BOTTOM ASIDE-OFF*/
 #off-btn {

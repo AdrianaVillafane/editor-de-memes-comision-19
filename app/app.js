@@ -33,13 +33,15 @@ const downloadMeme = () => {
       saveAs(blob, "my-meme.png")
   })
 }
-//BOTON DE CIERRE DE ASIDE no funciona
-const offAsideBtn = document.getElementById("off-btn"); // botón X de cierre aside
-const aside = document.getElementById("aside"); 
+//BOTON DE CIERRE DE ASIDE ----> funcionando
+const offAsideBtn = document.querySelector("#off-btn"); // botón X de cierre aside
+const aside = document.querySelector(".aside"); 
 
 offAsideBtn.addEventListener("click", () => {
-  aside.classList.add("hidden");
+  aside.classList.add("ocultar");
 });
+
+
 
 
 //COLOR DEL BACKGROUND DEL MEME   ----> FUNCIONA
@@ -74,11 +76,14 @@ modeButton.addEventListener("click", () => changeMode());
 const hideTextAside = () => {
   imgAside.classList.add("hidden");
   textAside.classList.remove("hidden");
+  aside.classList.remove("ocultar")
 };
+textButton.addEventListener("click",hideTextAside);
 
 const hideImgAside = () => {
   textAside.classList.add("hidden");
   imgAside.classList.remove("hidden");
+  aside.classList.remove("ocultar")
 };
 
 //URL-------->FUNCIONANDO
