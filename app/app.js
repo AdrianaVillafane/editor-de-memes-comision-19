@@ -180,3 +180,9 @@ const resetFilterBtn = document.getElementById("reset-btn");
 resetFilterBtn.addEventListener("click", (e) => {
   reset(e);
 });
+
+//TEXTO SUPERIOR----->
+
+const txtUpperMeme = document.getElementById("txt-upper-meme")//texto superior
+const topTxtArea = document.getElementById("top-text")//ingreso de texto
+
