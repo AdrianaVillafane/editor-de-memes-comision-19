@@ -181,21 +181,21 @@ resetFilterBtn.addEventListener("click", (e) => {
   reset(e);
 });
 
-//TEXTO SUPERIOR----->
+//TEXTO SUPERIOR----->FUNCIONANDO
 
-const txtUpperMeme = document.getElementById("txt-upper-meme")//texto superior
-const upperTxtArea = document.getElementById("upper-txt-area")//ingreso de texto
+const txtUpperMeme = document.getElementById("txt-upper-meme"); // texto superior
+const upperTxtArea = document.getElementById("upper-txt-area"); // ingreso de texto
 
+// TEXTO INFERIOR----->FUNCIONANDO
+const txtLowerMeme = document.getElementById("txt-lower-meme"); // texto inferior
+const lowerTxtArea = document.getElementById("lower-txt-area"); // ingreso de texto
 
-const txtLowerMeme = document.getElementById("txt-lower-meme    ")//texto inferior
-const lowerTxtArea = document.getElementById("lower-txt-area")//ingreso texto
-// aca quede
 upperTxtArea.addEventListener("input", () => {
   let upperTxt = upperTxtArea.value;
-  txtUpperMeme.innerHTML = topTxt;
+  txtUpperMeme.innerHTML = upperTxt; 
 });
 
-bottomTxtArea.addEventListener("input", () => {
-  let bottomTxt = bottomTxtArea.value;
-  memeBottomText.innerHTML = bottomTxt;
+lowerTxtArea.addEventListener("input", () => {
+  let lowerTxt = lowerTxtArea.value;
+  txtLowerMeme.innerHTML = lowerTxt; 
 });
