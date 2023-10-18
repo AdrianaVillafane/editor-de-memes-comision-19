@@ -56,6 +56,35 @@ $("#color-font").addEventListener("input", (e) =>{
 $("#color-font").addEventListener("input", (e) =>{
   $("#txt-lower-meme").style.color = e.target.value
 })
+//------*-----*-----
+const colorPickerFont = document.getElementById("color-font");
+const colorNameFont = document.getElementById("color-name-font");
+
+colorPickerFont.addEventListener("change", () => {
+  const fontColor = colorPickerFont.value;
+  colorNameFont.innerHTML = backgroundColor;
+  containerImg.style.backgroundColor = backgroundColor;
+});
+
+
+//TEXTO SUPERIOR----->FUNCIONANDO
+
+const txtUpperMeme = document.getElementById("txt-upper-meme"); // texto superior
+const upperTxtArea = document.getElementById("upper-txt-area"); // ingreso de texto
+
+// TEXTO INFERIOR----->FUNCIONANDO
+const txtLowerMeme = document.getElementById("txt-lower-meme"); // texto inferior
+const lowerTxtArea = document.getElementById("lower-txt-area"); // ingreso de texto
+//TEXAREA SUPERIOR
+upperTxtArea.addEventListener("input", () => {
+  let upperTxt = upperTxtArea.value;
+  txtUpperMeme.innerHTML = upperTxt; 
+});
+//TEXTAREA INFERIOR
+lowerTxtArea.addEventListener("input", () => {
+  let lowerTxt = lowerTxtArea.value;
+  txtLowerMeme.innerHTML = lowerTxt; 
+});
 
 
 //CAMBIO--ASIDE------FUNCIONANDO
@@ -181,21 +210,5 @@ resetFilterBtn.addEventListener("click", (e) => {
   reset(e);
 });
 
-//TEXTO SUPERIOR----->FUNCIONANDO
+/
 
-const txtUpperMeme = document.getElementById("txt-upper-meme"); // texto superior
-const upperTxtArea = document.getElementById("upper-txt-area"); // ingreso de texto
-
-// TEXTO INFERIOR----->FUNCIONANDO
-const txtLowerMeme = document.getElementById("txt-lower-meme"); // texto inferior
-const lowerTxtArea = document.getElementById("lower-txt-area"); // ingreso de texto
-
-upperTxtArea.addEventListener("input", () => {
-  let upperTxt = upperTxtArea.value;
-  txtUpperMeme.innerHTML = upperTxt; 
-});
-
-lowerTxtArea.addEventListener("input", () => {
-  let lowerTxt = lowerTxtArea.value;
-  txtLowerMeme.innerHTML = lowerTxt; 
-});
