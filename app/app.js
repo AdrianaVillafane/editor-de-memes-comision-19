@@ -131,7 +131,7 @@ colorPicker.addEventListener("input", changeBackgroundMeme);
 
 
 
-//FILTERS-------RANGE---------> 
+//FILTERS-------RANGE---------> FUNCIONANDO
 const brightnessRange = document.getElementById("brightness"); 
 const opacityRange = document.getElementById("opacity"); 
 const contrastRange = document.getElementById("contrast"); 
@@ -156,3 +156,27 @@ sepiaRange.addEventListener("input", imgFilter);
 hueRange.addEventListener("input", imgFilter);
 saturationRange.addEventListener("input", imgFilter);
 invertRange.addEventListener("input", imgFilter);
+
+
+//RESET----------->FUNCIONA
+
+const reset = (e) => {
+  e.preventDefault();
+  const memeImg = document.getElementById("meme-img");
+  memeImg.style.filter = `brightness(1) opacity(1) contrast(100%) blur(0px) grayscale(0%) sepia(0%) hue-rotate(0deg) saturate(100%) invert(0)`;
+
+  // Restablecer los valores de los rangos
+  brightnessRange.value = "1";
+  opacityRange.value = "1";
+  contrastRange.value = "100";
+  blurRange.value = "0";
+  grayscaleRange.value = "0";
+  sepiaRange.value = "0";
+  hueRange.value = "0";
+  saturationRange.value = "0";
+};
+
+const resetFilterBtn = document.getElementById("reset-btn");
+resetFilterBtn.addEventListener("click", (e) => {
+  reset(e);
+});
