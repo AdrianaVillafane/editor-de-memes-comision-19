@@ -131,13 +131,8 @@ colorPicker.addEventListener("input", changeBackgroundMeme);
 
 
 
-
-
-
-
-
-//FILTERS---------> 
-const brigtnessRange = document.getElementById("brightness"); 
+//FILTERS-------RANGE---------> 
+const brightnessRange = document.getElementById("brightness"); 
 const opacityRange = document.getElementById("opacity"); 
 const contrastRange = document.getElementById("contrast"); 
 const blurRange = document.getElementById("blur");
@@ -148,10 +143,11 @@ const saturationRange = document.getElementById("saturation");
 const invertRange = document.getElementById("invert");
 
 let imgFilter = () => {
-  img.style.filter = `brightness(${brigtnessRange.value}) opacity(${opacityRange.value}) contrast(${contrastRange.value}%) blur(${blurRange.value}px) grayscale(${grayscaleRange.value}%) sepia(${sepiaRange.value}%) hue-rotate(${hueRange.value}deg) saturation(${saturationRange.value}%) invert(${invertRange.value})`;
+  memeImg.style.filter = `brightness(${brightnessRange.value}) opacity(${opacityRange.value}) contrast(${contrastRange.value}%) blur(${blurRange.value}px) grayscale(${grayscaleRange.value}%) sepia(${sepiaRange.value}%) hue-rotate(${hueRange.value}deg) saturate(${saturationRange.value}%) invert(${invertRange.value})`;
 };
 
-brigtnessRange.addEventListener("input", imgFilter);
+
+brightnessRange.addEventListener("input", imgFilter);
 opacityRange.addEventListener("input", imgFilter);
 contrastRange.addEventListener("input", imgFilter);
 blurRange.addEventListener("input", imgFilter);
