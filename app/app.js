@@ -254,3 +254,24 @@ alignRight.addEventListener("click", () => {
   txtUpperMeme.style.textAlign = "right";
   txtLowerMeme.style.textAlign = "right";
 });
+
+
+//***BORDES****//
+const noBorder = document.getElementById("no-border")
+const darkBorder = document.getElementById("dark-border")
+const clearBorder = document. getElementById("clear-border")
+
+noBorder.addEventListener("click", () =>{
+  txtUpperMeme.style.webkitTextStroke = "transparent"
+  txtLowerMeme.style.webkitTextStroke = "transparent"
+})
+
+darkBorder.addEventListener("click", () => {
+  txtUpperMeme.style.webkitTextStroke = "1px black";
+  txtLowerMeme.style.webkitTextStroke = "1px black";
+});
+
+clearBorder.addEventListener("click", () => {
+  txtUpperMeme.style.webkitTextStroke = "1px white";
+  txtLowerMeme.style.webkitTextStroke = "1px white";
+});
