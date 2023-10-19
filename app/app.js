@@ -62,7 +62,7 @@ const colorNameFont = document.getElementById("color-name-font");
 
 colorPickerFont.addEventListener("change", () => {
   const fontColor = colorPickerFont.value;
-  colorNameFont.innerHTML = backgroundColor;
+  colorNameFont.innerHTML = fontColor;
   containerImg.style.backgroundColor = backgroundColor;
 });
 
@@ -130,7 +130,7 @@ const changeBackground = () => {
     memeImg.style.backgroundRepeat = "no-repeat";
     memeImg.style.backgroundPosition = "center";
 };
-//BOTON COLOR------->FUNCIONANDO pero falta la mezcla del fondo u.u
+//BOTON COLOR------->FUNCIONANDO 
 
 const containerImg = document.getElementById("container-img");
 const colorPicker = document.getElementById("color-picker");
@@ -210,5 +210,47 @@ resetFilterBtn.addEventListener("click", (e) => {
   reset(e);
 });
 
-/
 
+
+// FUENTES-SELECCION-FONT-FAMILY----------
+
+const fontsOptions = document.getElementById("fonts"); 
+
+fontsOptions.addEventListener("change", () => {
+  txtUpperMeme.style.fontFamily = `${fontsOptions.value}`;
+  txtLowerMeme.style.fontFamily = `${fontsOptions.value}`;
+});
+
+// FUENTE - FONT-SIZE
+
+const fontSize = document.getElementById("font-size"); 
+
+fontSize.addEventListener("change", () => {
+  txtUpperMeme.style.fontSize = `${fontSize.value}px`;
+  txtLowerMeme.style.fontSize = `${fontSize.value}px`;
+});
+fontSize.onkeyup = () => {
+  txtUpperMeme.style.fontSize = `${fontSize.value}px`;
+  txtLowerMeme.style.fontSize = `${fontSize.value}px`;
+};
+
+// FUENTE - ALINEACION-----****FUNCIONA******-----
+
+const alignLeft = document.getElementById("left-alignment"); //Botón align left
+const alignCenter = document.getElementById("center-alignment"); //Botón align center
+const alignRight = document.getElementById("right-alignment"); //Botón align right
+
+alignLeft.addEventListener("click", () => {
+txtUpperMeme.style.textAlign = "left";
+  txtLowerMeme.style.textAlign = "left";
+});
+
+alignCenter.addEventListener("click", () => {
+  txtUpperMeme.style.textAlign = "center";
+  txtLowerMeme.style.textAlign = "center";
+});
+
+alignRight.addEventListener("click", () => {
+  txtUpperMeme.style.textAlign = "right";
+  txtLowerMeme.style.textAlign = "right";
+});
