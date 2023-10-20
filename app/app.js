@@ -38,7 +38,7 @@ offAsideBtn.addEventListener("click", () => {
 });
 
 //COLOR DEL BACKGROUND DEL MEME   ----> FUNCIONA
-$("#color").addEventListener("input", (e) => {
+$("#color-picker").addEventListener("input", (e) => {
     $("#meme-img").style.backgroundColor = e.target.value;
 });
 //COLOR FUENTE SUPERIOR------> FUNCIONA
@@ -59,19 +59,13 @@ colorPickerFont.addEventListener("change", () => {
     txtUpperMeme.style.backgroundColor = backgroundColor;
     txtLowerMeme.style.backgroundColor = backgroundColor;
 });
-const txtBackgroundColorSpan = document.getElementById(
-    "txt-background-color-span"
+const txtBackgroundColor = document.getElementById(
+    "color-fondo"
   ); //span del imput color fondo texto
-  const transparentBackground = document.getElementById("no-background"); //input checkbox fondo transparente
+  const transparentBackground = document.getElementById("sin-fondo"); //input checkbox fondo transparente
   
-  colorinput.addEventListener("input", () => {
-    let color = colorInput.value;
-    colorSpan.innerHTML = color;
-    txtUpperMeme.style.color = color;
-    txtLowerMeme.style.color = color;
-  });
-  
-  txtBackgroundColorInput.addEventListener("input", () => {
+    
+  txtBackgroundColor.addEventListener("input", () => {
     fondo = txtBackgroundColorInput.value;
     txtBackgroundColorSpan.innerHTML = fondo;
     txtUpperMeme.style.backgroundColor = fondo;
@@ -94,7 +88,7 @@ const txtBackgroundColorSpan = document.getElementById(
     }
   });
   
-  //checkbox "sin texto sup"
+  //checkbox "sin texto superior"
   
   const noUpperText = document.getElementById("txt-sup-no"); //input "sin texto superior"
   
@@ -102,10 +96,10 @@ const txtBackgroundColorSpan = document.getElementById(
     txtUpperMeme.classList.toggle("hidden");
   });
   
-  //checkbox "sin texto sup"
-  const noBottomText = document.getElementById("txt-inf-no"); //input "sin texto inferior"
-  noBottomText.addEventListener("click", () => {
-    memeBottomText.classList.toggle("hidden");
+  //checkbox "sin texto inferior"
+  const noLowerText = document.getElementById("txt-inf-no"); //input "sin texto inferior"
+  noLowerText.addEventListener("click", () => {
+    txtLowerMeme.classList.toggle("hidden");
   });
 //TEXTO SUPERIOR----->FUNCIONANDO
 
@@ -348,4 +342,4 @@ const ajustarImagen = () => {
 window.addEventListener('load', ajustarImagen);
 window.addEventListener('resize', ajustarImagen);
 
-//**************//
+
