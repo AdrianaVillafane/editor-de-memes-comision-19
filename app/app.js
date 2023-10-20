@@ -49,16 +49,64 @@ $("#color-font").addEventListener("input", (e) => {
 $("#color-font").addEventListener("input", (e) => {
     $("#txt-lower-meme").style.color = e.target.value;
 });
-//------*-----*-----
-const colorPickerFont = document.getElementById("color-font");
-const colorNameFont = document.getElementById("color-name-font");
+//-----FONDO******//
+const colorPickerFont = document.getElementById("color-font");//color de fuente
+const colorNameFont = document.getElementById("color-name-font");//nombre del color de fuente
 
 colorPickerFont.addEventListener("change", () => {
     const fontColor = colorPickerFont.value;
     colorNameFont.innerHTML = fontColor;
-    containerImg.style.backgroundColor = backgroundColor;
+    txtUpperMeme.style.backgroundColor = backgroundColor;
+    txtLowerMeme.style.backgroundColor = backgroundColor;
 });
-
+const txtBackgroundColorSpan = document.getElementById(
+    "txt-background-color-span"
+  ); //span del imput color fondo texto
+  const transparentBackground = document.getElementById("no-background"); //input checkbox fondo transparente
+  
+  colorinput.addEventListener("input", () => {
+    let color = colorInput.value;
+    colorSpan.innerHTML = color;
+    txtUpperMeme.style.color = color;
+    txtLowerMeme.style.color = color;
+  });
+  
+  txtBackgroundColorInput.addEventListener("input", () => {
+    fondo = txtBackgroundColorInput.value;
+    txtBackgroundColorSpan.innerHTML = fondo;
+    txtUpperMeme.style.backgroundColor = fondo;
+    txtLowerMeme.style.backgroundColor = fondo;
+  });
+  
+  transparentBackground.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      txtUpperMeme.style.backgroundColor = "transparent";
+      txtLowerMeme.style.backgroundColor = "transparent";
+      txtUpperMeme.style.position = "absolute";
+      txtLowerMeme.style.position = "absolute";
+      txtLowerMeme.style.bottom = "8px";
+    } else {
+      txtUpperMeme.style.backgroundColor = fondo;
+      txtLowerMeme.style.backgroundColor = fondo;
+      txtLowerMeme.style.bottom = "0px";
+      txtUpperMeme.style.position = "static";
+      txtLowerMeme.style.position = "static";
+    }
+  });
+  
+  //checkbox "sin texto sup"
+  
+  const noUpperText = document.getElementById("txt-sup-no"); //input "sin texto superior"
+  
+  noUpperText.addEventListener("click", () => {
+    txtUpperMeme.classList.toggle("hidden");
+  });
+  
+  //checkbox "sin texto sup"
+  const noBottomText = document.getElementById("txt-inf-no"); //input "sin texto inferior"
+  noBottomText.addEventListener("click", () => {
+    memeBottomText.classList.toggle("hidden");
+  });
 //TEXTO SUPERIOR----->FUNCIONANDO
 
 const txtUpperMeme = document.getElementById("txt-upper-meme"); // texto superior
@@ -279,3 +327,25 @@ lineSpacing.addEventListener("change", () => {
     txtUpperMeme.style.lineHeight = `${lineHeight.value}`;
     txtLowerMeme.style.lineHeight = `${lineHeight.value}`;
 });
+//*****AJUSTAR IMAGEN******//
+
+
+const ajustarImagen = () => {
+  const contenedor = document.getElementById('container-img');
+  const imagen = document.getElementById('url-input');
+  
+  const relacion = contenedor.clientWidth / imagen.width;
+  
+  imagen.style.width = '100%';
+  imagen.style.height = 'auto';
+
+  if (relacion < 1) {
+    imagen.style.width = 'auto';
+    imagen.style.height = '100%';
+  }
+};
+
+window.addEventListener('load', ajustarImagen);
+window.addEventListener('resize', ajustarImagen);
+
+//**************//
