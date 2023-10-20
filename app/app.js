@@ -50,8 +50,8 @@ $("#color-font").addEventListener("input", (e) => {
     $("#txt-lower-meme").style.color = e.target.value;
 });
 //-----FONDO******//
-const colorPickerFont = document.getElementById("color-font");//color de fuente
-const colorNameFont = document.getElementById("color-name-font");//nombre del color de fuente
+const colorPickerFont = document.getElementById("color-font"); //color de fuente
+const colorNameFont = document.getElementById("color-name-font"); //nombre del color de fuente
 
 colorPickerFont.addEventListener("change", () => {
     const fontColor = colorPickerFont.value;
@@ -59,48 +59,45 @@ colorPickerFont.addEventListener("change", () => {
     txtUpperMeme.style.backgroundColor = backgroundColor;
     txtLowerMeme.style.backgroundColor = backgroundColor;
 });
-const txtBackgroundColor = document.getElementById(
-    "color-fondo"
-  ); //span del imput color fondo texto
-  const transparentBackground = document.getElementById("sin-fondo"); //input checkbox fondo transparente
-  
-    
-  txtBackgroundColor.addEventListener("input", () => {
+const txtBackgroundColor = document.getElementById("color-fondo"); //span del imput color fondo texto
+const noBackground = document.getElementById("sin-fondo"); //input checkbox fondo transparente
+
+txtBackgroundColor.addEventListener("input", () => {
     fondo = txtBackgroundColorInput.value;
-    txtBackgroundColorSpan.innerHTML = fondo;
+    txtBackgroundColor.innerHTML = fondo;
     txtUpperMeme.style.backgroundColor = fondo;
     txtLowerMeme.style.backgroundColor = fondo;
-  });
-  
-  transparentBackground.addEventListener("change", (event) => {
+});
+
+noBackground.addEventListener("change", (event) => {
     if (event.target.checked) {
-      txtUpperMeme.style.backgroundColor = "transparent";
-      txtLowerMeme.style.backgroundColor = "transparent";
-      txtUpperMeme.style.position = "absolute";
-      txtLowerMeme.style.position = "absolute";
-      txtLowerMeme.style.bottom = "8px";
+        txtUpperMeme.style.backgroundColor = "transparent";
+        txtLowerMeme.style.backgroundColor = "transparent";
+        txtUpperMeme.style.position = "absolute";
+        txtLowerMeme.style.position = "absolute";
+        txtLowerMeme.style.bottom = "8px";
     } else {
-      txtUpperMeme.style.backgroundColor = fondo;
-      txtLowerMeme.style.backgroundColor = fondo;
-      txtLowerMeme.style.bottom = "0px";
-      txtUpperMeme.style.position = "static";
-      txtLowerMeme.style.position = "static";
+        txtUpperMeme.style.backgroundColor = fondo;
+        txtLowerMeme.style.backgroundColor = fondo;
+        txtLowerMeme.style.bottom = "0px";
+        txtUpperMeme.style.position = "static";
+        txtLowerMeme.style.position = "static";
     }
-  });
-  
-  //checkbox "sin texto superior"
-  
-  const noUpperText = document.getElementById("txt-sup-no"); //input "sin texto superior"
-  
-  noUpperText.addEventListener("click", () => {
+});
+
+//checkbox "sin texto superior"
+
+const noUpperText = document.getElementById("txt-sup-no"); //input "sin texto superior"
+
+noUpperText.addEventListener("click", () => {
     txtUpperMeme.classList.toggle("hidden");
-  });
-  
-  //checkbox "sin texto inferior"
-  const noLowerText = document.getElementById("txt-inf-no"); //input "sin texto inferior"
-  noLowerText.addEventListener("click", () => {
+});
+
+//checkbox "sin texto inferior"
+const noLowerText = document.getElementById("txt-inf-no"); //input "sin texto inferior"
+noLowerText.addEventListener("click", () => {
     txtLowerMeme.classList.toggle("hidden");
-  });
+});
 //TEXTO SUPERIOR----->FUNCIONANDO
 
 const txtUpperMeme = document.getElementById("txt-upper-meme"); // texto superior
@@ -153,7 +150,6 @@ const hideImgAside = () => {
 const urlInput = document.getElementById("url-input");
 const memeImg = document.getElementById("meme-img");
 
-console.log(memeImg);
 
 urlInput.addEventListener("input", () => changeBackground());
 
@@ -323,23 +319,20 @@ lineSpacing.addEventListener("change", () => {
 });
 //*****AJUSTAR IMAGEN******//
 
-
 const ajustarImagen = () => {
-  const contenedor = document.getElementById('container-img');
-  const imagen = document.getElementById('url-input');
-  
-  const relacion = contenedor.clientWidth / imagen.width;
-  
-  imagen.style.width = '100%';
-  imagen.style.height = 'auto';
+    const contenedor = document.getElementById("container-img");
+    const imagen = document.getElementById("url-input");
 
-  if (relacion < 1) {
-    imagen.style.width = 'auto';
-    imagen.style.height = '100%';
-  }
+    const relacion = contenedor.clientWidth / imagen.width;
+
+    imagen.style.width = "100%";
+    imagen.style.height = "auto";
+
+    if (relacion < 1) {
+        imagen.style.width = "auto";
+        imagen.style.height = "100%";
+    }
 };
 
-window.addEventListener('load', ajustarImagen);
-window.addEventListener('resize', ajustarImagen);
-
-
+window.addEventListener("load", ajustarImagen);
+window.addEventListener("resize", ajustarImagen);
